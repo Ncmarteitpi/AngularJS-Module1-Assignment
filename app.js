@@ -11,21 +11,14 @@
             var tots = 0;
             var splitItem = $scope.inputItem.split(",");
             console.log(splitItem.length);
-            for(var i=0;i<splitItem.length;i++)
-            {
-                if (splitItem[i] == "")
-                {
-                    tots = tots -1;
-                }
-            }
-            if(tots > 3)
+            if(splitItem.length > 3)
             {
                 document.getElementById("resultType").style.color = "#ff0000";
                 $scope.inputResult = "Too much!";
             }
             else if($scope.inputItem == "")
             {
-
+                document.getElementById("resultType").style.color = "#000000";
                 $scope.inputResult = "Please enter data first";
             }
             else{
